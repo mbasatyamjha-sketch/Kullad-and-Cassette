@@ -12,7 +12,7 @@ export default function Home() {
       {/* Background */}
      <div 
   className="fixed inset-0 -z-20 bg-cover bg-center" 
-  style={{ backgroundImage: "url('https://i.postimg.cc/xd1WNHP8/Chat-GPT-Image-Aug-13-2026-10-48-30-AM.png')" }}
+  style={{ backgroundImage: "url('https://files.catbox.moe/ghvzqz.png')" }}
 >
     <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/80" />
 </div>
