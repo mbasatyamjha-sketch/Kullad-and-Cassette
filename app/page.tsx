@@ -10,12 +10,13 @@ export default function Home() {
   return (
     <main className="relative flex min-h-dvh flex-1 flex-col items-center justify-between overflow-hidden">
       {/* Background */}
-     <div 
-  className="fixed inset-0 -z-20 bg-cover bg-center" 
-  style={{ backgroundImage: "url('https://files.catbox.moe/ghvzqz.png')" }}
->
-    <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/80" />
-</div>
+    {/* 100% Working Background Image */}
+<img 
+  src="https://files.catbox.moe/ghvzqz.png" 
+  alt="Kullad and Cassette Background" 
+  className="fixed inset-0 w-full h-full object-cover -z-30" 
+/>
+<div className="fixed inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/80 -z-20 pointer-events-none" />
       {/* Grain */}
       <div
         className="grain-overlay fixed inset-0 -z-10"
