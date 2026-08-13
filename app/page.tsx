@@ -10,10 +10,12 @@ export default function Home() {
   return (
     <main className="relative flex min-h-dvh flex-1 flex-col items-center justify-between overflow-hidden">
       {/* Background */}
-      <div className="hero-bg fixed inset-0 -z-20 bg-cover bg-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/80" />
-      </div>
-
+     <div 
+  className="fixed inset-0 -z-20 bg-cover bg-center" 
+  style={{ backgroundImage: "url('https://i.postimg.cc/xd1WNHP8/Chat-GPT-Image-Aug-13-2026-10-48-30-AM.png')" }}
+>
+    <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/80" />
+</div>
       {/* Grain */}
       <div
         className="grain-overlay fixed inset-0 -z-10"
@@ -55,7 +57,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="z-20 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <p className="text-xs text-white/50">Made by Satyam Jha</p>
+        <p className="text-xs text-white/50">Made with ❤️ by Satyam Jha</p>
       </footer>
     </main>
   );
