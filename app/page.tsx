@@ -32,23 +32,28 @@ export default function Home() {
         <SocialLinks />
       </div>
 
-      {/* Centerpiece branding */}
-      <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
-        <span className="mb-4 font-mono text-[10px] uppercase tracking-[0.4em] text-clay-light/90 sm:text-[11px]">
+      {/* Centerpiece Branding/Intro Content */}
+      <div className="flex-1 flex flex-col items-center justify-center text-center p-6 z-10 pointer-events-none mt-10">
+        
+        {/* On Air text (Vintage Gold) */}
+        <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-[#e8d5a5] mb-3 font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
           On air, always
-        </span>
-        <h1 className="animate-rise font-display text-5xl italic leading-none text-cream text-shadow-soft sm:text-6xl md:text-7xl">
-          Kullad <span className="not-italic text-clay-light">&amp;</span> Cassette
-        </h1>
-        <p className="mt-5 max-w-sm text-sm text-white/60 sm:max-w-md sm:text-base">
-          Chai in a kullad, songs on a cassette — a slow radio for the tapes we grew up
-          rewinding.
         </p>
-        <div className="mt-5 sm:hidden">
-          <ListenerCount />
-        </div>
-      </div>
 
+        {/* Main Title (Warm White + Vintage Gold) */}
+        <h1 className="flex flex-col items-center justify-center font-bold mb-4 drop-shadow-[0_4px_10px_rgba(0,0,0,1)] drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+          <span className="text-7xl md:text-8xl text-[#fdf8ed] tracking-wide mb-1">कुल्हड़</span>
+          <span className="text-4xl md:text-5xl text-[#e8d5a5] tracking-widest mt-1">& Cassette</span>
+        </h1>
+
+        {/* Subtitle (Inside a very subtle dark glass pill for 100% readability) */}
+        <div className="mt-4 bg-black/30 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-white/10 shadow-xl">
+          <p className="text-sm md:text-base text-[#fdf8ed] max-w-md leading-relaxed font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            Chai in a kullad, songs on a cassette — a slow radio for the tapes we grew up rewinding.
+          </p>
+        </div>
+        
+      </div>
       {/* Player */}
       <div className="z-20 w-[min(94vw,32rem)] pb-3 sm:w-full sm:max-w-xl sm:pb-4">
         <Player />
