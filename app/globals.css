@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #150d09;
+  --color-ink-soft: #241408;
+  --color-cream: #f2e6cd;
+  --color-cream-dim: #d9c9a3;
+  --color-clay: #c1652f;
+  --color-clay-light: #e8934c;
+  --color-clay-glow: #ff9a52;
+  --color-tape: #8a5a34;
+
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-blink: blink 1s step-start infinite;
+  --animate-rise: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.hero-bg {
+  background-image: url("https://i.postimg.cc/xd1WNHP8/Chat-GPT-Image-Aug-13-2026-10-48-30-AM.png");
+}
+
+.grain-overlay {
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+}
+
+.text-shadow-soft {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Seek bar knob only reveals on hover/active */
+.seek-track {
+  touch-action: none;
+}
+.seek-knob {
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+.seek-track:hover .seek-knob,
+.seek-track:active .seek-knob {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
